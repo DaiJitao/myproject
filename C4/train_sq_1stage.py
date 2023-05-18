@@ -16,9 +16,9 @@ from torch.autograd import Variable
 from torch.utils.data import DataLoader
 
 # sys.path.append('./auxiliary/')
-from mydemo.model import CreateNet, squeezenet1_1
-from mydemo.dataset import *
-from mydemo.utils import *
+from C4.model import CreateNet, squeezenet1_1
+from C4.dataset import *
+from C4.utils import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--batch_size', type=int, default=16, help='input batch size')

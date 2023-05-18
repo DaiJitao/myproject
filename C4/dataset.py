@@ -11,7 +11,7 @@ import torch
 import torch.utils.data as data
 
 from config import *
-from mydemo.utils import rotate_and_crop
+from C4.utils import rotate_and_crop
 
 class ColorChecker(data.Dataset):
     def __init__(self,train=True,folds_num=1):

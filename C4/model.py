@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.init as init
 import torch.utils.model_zoo as model_zoo
-from mydemo.utils import *
+from C4.utils import *
 import sys
 
 __all__ = ['SqueezeNet', 'squeezenet1_0', 'squeezenet1_1']
@@ -237,12 +237,8 @@ if __name__ == '__main__':
     layers = list(SqueezeNet.children())
     print(len(layers[0]))
 
-    network = CreateNet(SqueezeNet,resnet)
-    # summary(SqueezeNet, input_size=(16, 3, 256, 256))
-    # summary(network, input_size=(16, 3, 256, 256))
-    # print(network)
-    #
-    # input = torch.randn([16, 3, 256, 256])
+    network = CreateNet(SqueezeNet,None)
+
     label = torch.randn([16, 3])
     pred = network(input)
     print(pred.shape)
